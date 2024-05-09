@@ -11,16 +11,19 @@
     font-family: 'Poppins', 'sans-serif';
 
 }
+body {
+    zoom: 100%;
+}
 :root{
-    --bg-color:#fdfdfd;
+    --bg-color:white;
     --text-color:#333;
-    --main-color: #8A9A5B;
+    --main-color:  #8A9A5B;
     --shadow-color:rgba(0, 0, 0, .2);
 }
 .dark-mode{
-    --bg-color:#0b061f;
+    --bg-color:#03010d;
     --text-color:#fdfdfd;
-    --main-color:#754ef9;
+    --main-color: #8A9A5B;
     --shadow-color:rgba(0, 0, 0, .7);
 }
 html{
@@ -187,14 +190,17 @@ section{
     animation: professionRotate 13s ease-out infinite;
 }
 @keyframes professionRotate{
-    0%,33%{
+    0%,20%{
         transform: rotate(0deg);
     }
-    38%,63%{
-        transform: rotate(-120deg);
+    25%,45%{
+        transform: rotate(-90deg);
     }
-    68%,94%{
-        transform: rotate(-240deg);
+    50%,70%{
+        transform: rotate(-180deg);
+    }
+    75%,95%{
+        transform: rotate(-270deg);
     }
     100%{
         transform: rotate(-360deg);
@@ -203,7 +209,7 @@ section{
 .profession-box .profession{
     position: absolute;
     left:0;
-    transform:rotate(calc(360deg / 3 * var(--i)));
+    transform:rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     display: flex;
     flex-direction: column;
@@ -216,8 +222,8 @@ section{
     margin-right: 15px;
 }
 .profession-box .profession:nth-child(2) i,
-.profession-box .profession:nth-child(3) i{
-    margin-right: 20px;
+.profession-box .profession:nth-child(4) i{
+   margin-right: 20px;
 }
 
 
@@ -247,12 +253,22 @@ section{
     border-right: 384px solid var(--main-color);
     border-bottom: 384px solid var(--main-color);
     border-left: 384px solid transparent;
+    background-image: url('port-pic-1\ \(1\).png');
+    /* opacity: 0.7; Adjust the opacity as needed */
+  z-index: 1;
 
 }
+/* .home-img{
+    display: flex;
+} */
 .home-img img{
     position: absolute;
+    padding: 0;
     bottom: 0;
-    left: 0;
+    top: 8%;
+    left: 60%;
+    width: 45%;
+    height: 95%;
     /* width: 100%; */
     pointer-events: none;
 }
@@ -566,7 +582,78 @@ flex-wrap: wrap;
     color: #333;
  }
 
- @media(max-width:1200px){
+.contain{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.contain .progress{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: #fff;
+    background:#4444 linear-gradient(to right, transparent 50%, var(--clr) 0) ;
+}
+.contain .progress h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5em;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.contain .progress h3 span{
+    font-size: 0.65em;
+    font-weight: 400;
+}
+.contain .progress h4{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-weight: 500;
+    color: var(--clr);
+    text-transform: uppercase;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contain .progress::before{
+    content:'';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+}
+.contain .progress::after{
+    content:'';
+    position: absolute;
+    inset: 10px;
+    background: #222;
+    border-radius: 50%;
+}
+.contain .progress::before{
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50 )* 0.01turn)));
+}
+.contain .progress .less::before{
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 0 * 0.01turn))));
+}
+ @media(max-width:1275px){
     html{
         font-size: 55%;
     }
@@ -580,8 +667,14 @@ flex-wrap: wrap;
     .home .profession-container .overlay{
         right: -9rem;
     }
+    .home-img img{
+        top: 15%;
+        left: 53%;
+    width: 500px;
+    height:600px;
+    }
  }
- @media(max-width: 1024px)
+ @media(max-width: 1111px)
  {
     .header{
         padding: 2rem 3%;
@@ -596,10 +689,10 @@ flex-wrap: wrap;
         right: -15rem;
     }
  }
- @media(max-width:991px)
+ @media(max-width:991px)/*error*/
  {
-    .navbar a:nth-child(1),
-    .navbar a:nth-child(2)
+    .navbar a:nth-child(1)
+    /* .navbar a:nth-child(2) */
     {
         color: var(--main-color);;
     }
@@ -633,7 +726,7 @@ flex-wrap: wrap;
  }
 
 
- @media(max-width:768px)
+ @media(max-width:810px)
  {
     #menu-icon{
         display: block;
@@ -694,19 +787,19 @@ flex-wrap: wrap;
         width: 100%;
         height: 100%;
     }
-    .home .profession-box{
+    .home .profession-container .profession-box{
         position: fixed;
         top: 60%;
         left: 0;
         border-radius: 0;
         width: 100%;
     }
-    .home .profession{
+    .home .profession-box .profession{
         padding: 0 13px;
         left: auto;
         transform-origin: 0;
     }
-    .home .profession:nth-child(1){
+    .home .profession-box .profession:nth-child(1){
         transform: rotate(-90deg) translate(-120px, -210px);
     }
     .home .profession:nth-child(1) i{
@@ -718,7 +811,10 @@ flex-wrap: wrap;
     .home .profession:nth-child(3){
         transform: rotate(90deg) translate(-115px, -450px);
     }
-    .home .circle{
+    .home .profession:nth-child(4){
+        transform: rotate(180deg) translate(-220px, -335px);
+    }
+    .home .profession-box .circle{
         position: fixed;
         width: 670px;
         height: 670px;
@@ -780,11 +876,14 @@ flex-wrap: wrap;
     .home .profession:nth-child(3){
         transform: rotate(90deg) translate(-105px, -440px);
     }
+    .home .profession:nth-child(4){
+        transform: rotate(180deg) translate(-210px, -335px);
+    }
     .contact form .input-box input{
         width: 100%;
     } 
  }
- @media(max-width: 365px)
+ @media(max-width: 385px)
  {
     .about-img img{
         width: 90vw;
@@ -795,6 +894,9 @@ flex-wrap: wrap;
     .footer p{
         text-align: center;
         margin-top: 2rem;
+    }
+    .profession-container{
+        margin-top: 10px;
     }
  }
 
@@ -880,19 +982,5 @@ flex-wrap: wrap;
         background: var(--main-color);
         box-shadow: var(--text-color);
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

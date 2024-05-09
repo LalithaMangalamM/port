@@ -4,15 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <mets http-equiv="X-UA-Compatible" content="IE=edge"></mets>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="./styles.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
 </head>
 
 <body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="circle-progress.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" type="module"></script>
+
+<circle-progress value="50" max="100"></circle-progress> -->
   <header class="header">
-    <a href="#" class="logo">Portfolio</a>
+    <a href="#"  class="logo"></a>
 
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
@@ -21,24 +27,24 @@
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="bx bx-moon" id="darkMode-icon"></div>
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <div style="cursor: pointer;" class="bx bx-moon" id="darkMode-icon"></div>
+    <div style="cursor: pointer;" class="bx bx-menu" id="menu-icon"></div>
   </header>
   <section class="home" id="home">
     <div class="home-content">
       <h3>Hello, I am</h3>
       <h1>Lalitha Mangalam</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Reprehenderit, ab minima modi sit architecto in distinctio temporibus.
+        
+Passionate full stack developer, dedicated to crafting innovative solutions. Thrives in challenging environments, embracing growth opportunities.
       </p>
       <div class="social-media">
         <a href="https://www.linkedin.com/in/lalitha-mangalam-m-115129242/" target="_blank"><i
             class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/LalithaMangalamM" target="_blank"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="https://www.instagram.com/__lallz_15/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
       </div>
-      <a href="" class="btn">Download Resume</a>
+      <a href="https://drive.google.com/drive/folders/118-5v32ZQY4uSzNohPucIMWcn-g92wHT?usp=sharing" download="LALITHA MANGALAM M _FULL STACK DEVELOPER.pdf" target="_blank" class="btn">Download Resume</a>
     </div>
     <div class="profession-container">
       <div class="profession-box">
@@ -54,236 +60,149 @@
           <i class='bx bx-cloud'></i>
           <h3>AWS Beginner</h3>
         </div>
+        <div class="profession" style="--i:3;">
+          <i class='bx bx-crown'></i>
+          <h3>Intuitive Leader</h3>
+        </div>
         <div class="circle"></div>
       </div>
-      <div class="overlay"></div>
+      <div class="overlay">
+      </div>
 
     </div>
     <div class="home-img">
-      <!-- <img src="./edited.png" alt=""> -->
+      <img src="./lalitha.png" alt="">
     </div>
   </section>
 
   <!-- about -->
   <section class="about" id="about">
     <div class="about-img">
-      <img src="./edited.png" alt="">
+      <img src="./MAIN.png" alt="">
     </div>
     <div class="about-content" id="about-content">
       <h2 class="heading">About <span> Me</span></h2>
       <h3>Hi, I'm Here To Help Your Next Project</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, reiciendis neque. Qui atque tenetur laborum
-        veniam eos eum natus at accusantium, cumque, dicta repudiandae nihil voluptates fugiat. Voluptatum, nulla ipsam,
-        soluta enim maiores natus ea laborum expedita minus, commodi ut.</p>
+      <p>In the vast expanse of the technological landscape, I find myself on a journey of exploration, driven by a deep-seated passion for Full Stack Development, AWS, and Machine Learning. With a gentle curiosity and an unwavering commitment to learning, I embark on a path of discovery, eager to uncover the secrets of tomorrow's innovations.</p>
       <a href="" class="btn">Read More</a>
     </div>
   </section>
-  <!-- <section class="skills" id="skills">
-    <div class="main-text">
-      <span>Technical and Professional</span>
-      <h2>My Skills</h2>
-    </div>
-    <div class="skill-main">
-      <div class="skill-left">
-        <h3>Technical Skills</h3>
-        <div class="skill-bar">
-          <div class="info">
-            <p>HTML</p>
-            <p>80%</p>
-          </div>
-          <div class="bar">
-            <span class = 'html'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>CSS</p>
-            <p>80%</p>
-          </div>
-          <div class="bar">
-            <span class = 'css'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>JavaScript</p>
-            <p>75%</p>
-          </div>
-          <div class="bar">
-            <span class = 'js'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>React</p>
-            <p>70%</p>
-          </div>
-          <div class="bar">
-            <span class = 'react'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>Node JS</p>
-            <p>65%</p>
-          </div>
-          <div class="bar">
-            <span class = 'node'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>Express JS</p>
-            <p>65%</p>
-          </div>
-          <div class="bar">
-            <span class = 'exp'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>My SQL</p>
-            <p>80%</p>
-          </div>
-          <div class="bar">
-            <span class = 'sql'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>Mongo DB</p>
-            <p>65%</p>
-          </div>
-          <div class="bar">
-            <span class = 'mongo'></span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="info">
-            <p>AWS Cloud</p>
-            <p>50%</p>
-          </div>
-          <div class="bar">
-            <span class = 'aws'></span>
-          </div>
-        </div>
+  <section class="skill">
+    <h2 class="heading">My <span> Skills</span></h2>    <div class="contain">
+      <div class="progress" style="--i:85;--clr:#43f94a">
+        <h3>85<span>%</span></h3>
+        <h4>HTML & CSS</h4>    
       </div>
-      <div class="skill-right">
-        <h3>Professional Skills</h3>
-        <div class="professional">
-          <div class="box">
-            <div class="cir" data-dots="80" data-percent="90"></div>
-              <div class="text">
-                <h3>90%</h3>
-                <h1>Leadership</h1>
-              </div>
-          </div>
-          <div class="box">
-            <div class="cir" data-dots="80" data-percent="90"></div>
-            <div class="text">
-              <h3>90%</h3>
-              <h1>Leadership</h1>
-            </div>
-        </div>
-        <div class="box">
-          <div class="cir" data-dots="80" data-percent="90"></div>
-          <div class="text">
-            <h3>90%</h3>
-            <h1>Leadership</h1>
-          </div>
+      <div class="progress" style="--i:75;--clr:#2ccde9">
+        <h3>75<span>%</span></h3>
+        <h4>JS</h4>    
       </div>
-      <div class="box">
-        <div class="cir" data-dots="80" data-percent="90"></div>
-        <div class="text">
-          <h3>90%</h3>
-          <h1>Leadership</h1>
-        </div>
-    </div>
-    <div class="box">
-      <div class="cir" data-dots="80" data-percent="90"></div>
-      <div class="text">
-        <h3>90%</h3>
-        <h1>Leadership</h1>
+      <div class="progress" style="--i:80;--clr:#fb297b">
+        <h3>80<span>%</span></h3>
+        <h4>react</h4>    
       </div>
-  </div>
-  <div class="box">
-    <div class="cir" data-dots="80" data-percent="90"></div>
-    <div class="text">
-      <h3>90%</h3>
-      <h1>Leadership</h1>
-    </div>
-</div>
-        </div>
+      <div class="progress" style="--i:70;--clr:#ffe047">
+        <h3>70<span>%</span></h3>
+        <h4>Mongo db</h4>    
       </div>
+      <div class="progress" style="--i:80;--clr:#43f94a">
+        <h3>80<span>%</span></h3>
+        <h4>My Sql</h4>    
+      </div>
+      <div class="progress" style="--i:60;--clr:#2ccde9">
+        <h3>60<span>%</span></h3>
+        <h4>Node & Express</h4>    
+      </div>
+      <div class="progress" style="--i:50;--clr:#fb297b">
+        <h3>50<span>%</span></h3>
+        <h4>PHP</h4>    
+      </div>
+      <div class="progress" style="--i:50;--clr:#ffe047">
+        <h3>50<span>%</span></h3>
+        <h4>AWS</h4>    
+      </div>
+      <div class="progress" style="--i:50;--clr:#43f94a">
+        <h3>50<span>%</span></h3>
+        <h4>Ml</h4>    
+      </div>
+      <div class="progress" style="--i:70;--clr:#2ccde9">
+        <h3>70<span>%</span></h3>
+        <h4>UI/UX</h4>    
+      </div>
+
     </div>
-  </section> -->
+  </section>
+
+
+
+
   <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Projects</span></h2>
+    <h2 class="heading">Latest <span>Works</span></h2>
     <div class="portfolio-container">
       <div class = "portfolio-box">
         <img src="./page.png" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>NEWSX</h4>
+          <p>Crafted this with React,NEWS API,Alan AI API.Enhanced news accessibility with custom speech recognition.</p>
+          <a href="https://lalithamangalamm.github.io/voice-assisted-news-aggregator/" target="_blank"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
       <div class = "portfolio-box">
-        <img src="./page.png" alt="">
+        <img src="./todo.png" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>TaskEase</h4>
+          <p>Your Simple Solution for Efficient To-Do List Management, Making Organization Effortless.</p>
+          <a href="https://github.com/LalithaMangalamM/Todo-new.git" target="_blank"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
       <div class = "portfolio-box">
-        <img src="./page.png" alt="">
+        <img src="./sports.jpeg" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>Sports Event Management</h4>
+          <p>Efficiently manage sports events hassle-free.</p>
+          <a href="https://github.com/LalithaMangalamM/sports-event-management.git"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
       <div class = "portfolio-box">
-        <img src="./page.png" alt="">
+        <img src="./profile.jpg" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>CKD Prediction Model</h4>
+          <p>"Revolutionize healthcare with our ML model, predicting chronic kidney disease for proactive intervention.</p>
+          <a href="https://github.com/LalithaMangalamM/AI_CKD_Prediction.git"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
       <div class = "portfolio-box">
-        <img src="./page.png" alt="">
+        <img src="./chat.png" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>Chat Nexus</h4>
+          <p>Unlock endless conversation possibilities with our AI-powered chatbot clone.</p>
+          <a href="https://github.com/LalithaMangalamM/chat_ai"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
       <div class = "portfolio-box">
-        <img src="./page.png" alt="">
+        <img src="./code.jpg" alt="">
         <div class="portfolio-layer">
-          <h4>Project Name</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta?</p>
-          <a href="#"><i class='bx bx-link-external'></i> </a>
+          <h4>Coding Practices</h4>
+          <p>Repository to my DSA solutions</p>
+          <a href="https://github.com/LalithaMangalamM/techdose-training-assignments.git"><i class='bx bx-link-external'></i> </a>
         </div>
       </div>
     </div>
   </section> 
   <section class="contact" id="contact">
     <div class="heading">Contact <span>Me!</span></div>
-    <form action="#">
+    <form action="https://formspree.io/f/mgegnndg"   method="POST">
       <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Full Name" name="name">
+        <input type="email" placeholder="Email Address" name="email">
 
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+        <input type="number" placeholder="Mobile Number" name="mobile">
+        <input type="text" placeholder="Email Subject" name="subject">
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message" class="btn">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" name = "message"></textarea>
+      <button type="submit" value="Send Message" class="btn">Submit</button>
     </form>
   </section>
     <footer class="footer">
@@ -297,6 +216,7 @@
       </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script>
   <script src="./script.js"></script>
 </body>
 

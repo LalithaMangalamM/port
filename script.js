@@ -1,3 +1,5 @@
+// import smtp from 'smtp.js';
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
@@ -49,12 +51,35 @@ cir.forEach(ele => {
     }
 })
 
-let darkModeIcon = document.querySelector('#darkMode-icon');
+// let darkModeIcon = document.querySelector('#darkMode-icon');
 
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('dark-mode')
-}
+// darkModeIcon.onclick = () => {
+//     darkModeIcon.classList.toggle('bx-sun');
+//     document.body.classList.toggle('dark-mode')
+// }
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeIcon = document.querySelector('#darkMode-icon');
+
+    // Retrieve dark mode preference from local storage
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    // Function to toggle dark mode
+    const toggleDarkMode = () => {
+        darkModeIcon.classList.toggle('bx-sun');
+        document.body.classList.toggle('dark-mode');
+        // Store dark mode preference in local storage
+        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+
+    // Apply dark mode preference on page load
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        darkModeIcon.classList.add('bx-sun');
+    }
+
+    // Event listener for dark mode toggle
+    darkModeIcon.addEventListener('click', toggleDarkMode);
+});
 ScrollReveal({
     // reset:true,
     distance: '80px',
@@ -68,6 +93,20 @@ ScrollReveal().reveal('.home-content h1, .about-img img', {origin:'left'})
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', {origin:'right'})
 
 
+// document.getElementById("submit-button").addEventListener("click",() => {
+//     var name = document.getElementById("name").value;
+//     var email = document.getElementById("email").value;
+//     var sub = document.getElementById("subject").value;
+//     var mobile = document.getElementById("mobile").value;
+//     var message = document.getElementById("message").value;
 
+//     const mail = {
+//         from: email,
+//         to: 'lalli155003@gmail.com',
+//         subject: sub,
+//         text: 'this is a mail from ${name}\n${message}\ncontact: ${mobile}'
+//     }
+//     smtp.sendMail(mail).then(info => alert(info)).catch(err => alert(err))
+// })
 
 
